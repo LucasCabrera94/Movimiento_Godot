@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b45b5dgwkdq5"]
+
+[ext_resource type="Texture2D" uid="uid://d1yr1sp1ylt16" path="res://Assets/primera-capa.png" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://vnasvqiqnyng" path="res://Escena/character_body_2d.tscn" id="2_0e48y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(1148, 13.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-39, 619)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(614, -2.75)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(614, -82)
+scale = Vector2(0.820714, 0.433281)
+texture = ExtResource("1_0e48y")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(41, 567)
